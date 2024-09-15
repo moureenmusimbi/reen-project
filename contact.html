@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Salon - Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Brand</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-time close-btn"></i>
+            </div>
+            <a href="./index.html">Home</a>
+            <a href="#">Service</a>
+            <a href="#">Gallery</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btnS"></i>
+        </div>
+    </header>
+
+  <h1 class="contact">Contact Us</h1>
+
+  <form class="contact-form" action="submit_form.php" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Your full name..." required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email address..." required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Your phone number..." required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Your message..." required></textarea>
+
+    <input type="submit" value="Send Message">
+  </form>
+
+</body>
+</html>
