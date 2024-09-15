@@ -1,103 +1,100 @@
+/* Reset margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*hearder*/
-
+/* Header */
 header {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px, 100px;
-  transform: 0.6s;
+  padding: 20px 5%;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
 }
 
 header .brand {
-  color: #fff;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
+  color: #fff;
 }
 
 header .menu {
-  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 header .menu a {
-  color: #000;
+  color: #fff;
   font-size: 16px;
   font-weight: 900;
   text-decoration: none;
-  margin: 0 30px;
+  margin: 0 15px;
   padding: 0 10px;
   border-radius: 20px;
-  transition: 0.3s;
-  transition-property: color, background;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header .menu a:hover {
   background-color: #fff;
+  color: #000;
 }
 
 header .btn {
-  color: #000;
-  font-size: 20px;
-  cursor: pointer;
   display: none;
 }
 
-/*container*/
-
+/* Container for text and image sections */
 .container {
-  width: 100%;
-  height: 90vh;
-  background-color: #fae9e9;
-  background-position: center;
-  background-size: cover;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 5%;
+  align-items: center;
+  padding: 100px 5% 50px;
+  background-color: #fae9e9;
 }
 
-.img {
-  width: 35%;
+.container .txt {
+  flex: 1;
+  max-width: 50%;
 }
 
-.img-sec {
-  width: 50%;
-  height: 100%;
-  margin-right: 50px;
+.container .img {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-img {
-  width: 50%;
-  height: 50%;
+.container img {
+  width: 100%;
+  height: auto;
 }
+
 .txt-p {
   font-family: "Georgia", serif;
   font-size: 1.2em;
   line-height: 1.6;
-  color: #555; /* Soft grey */
-  background-color: #fdf1f1; /* Light pink background */
+  color: #555;
+  background-color: #fdf1f1;
   padding: 20px;
-  border-left: 5px solid #ff69b4; /* Pink border */
+  border-left: 5px solid #ff69b4;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   margin: 20px auto;
   text-align: justify;
 }
+
 .container .txt h3 {
   font-size: 3vmin;
   letter-spacing: 2px;
@@ -125,190 +122,224 @@ img {
   border-radius: 50px;
 }
 
-.container img {
-  width: 100%;
-}
-
-.container img {
-  width: 500px;
-}
-
+/* About Section */
 .about {
   width: 90%;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
 }
 
-.about .img-sec img {
-  width: 500px;
+.about .img-sec iframe {
+  width: 100%;
+  max-width: 640px;
+  height: 360px;
+  border: none;
 }
 
+/* About Section - Text Section */
 .about .text-sec {
-  padding: 50px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff; /* White background for contrast */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center; /* Center-align text for better readability */
 }
 
 .about .text-sec h3 {
-  font-size: 2.6vmin;
-  letter-spacing: 2px;
-  color: #f18c8e;
+  font-size: 2.4em;
+  color: #f18c8e; /* Matching the brand color */
   text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
 }
 
 .about .text-sec h1 {
-  font-size: 5vmin;
-  padding: 20px 0;
+  font-size: 3.5em;
+  line-height: 1.2;
+  color: #333; /* Darker color for better readability */
+  margin-bottom: 20px;
 }
 
 .about .text-sec p {
-  font-size: 3vmin;
-  letter-spacing: 1px;
-  color: #9a9a9a;
+  font-size: 1.2em;
+  color: #666; /* Slightly lighter gray for text */
+  line-height: 1.6;
+  margin: 0 auto; /* Center-align text for better alignment */
+  max-width: 700px; /* Limit width for better readability */
 }
 
-/*four column*/
-
-.main-col {
+/* Services and Pricing Sections */
+/* Ensure consistent image sizing without affecting quality */
+.services img,
+.pricing .pricing-sec img {
   width: 100%;
-  background-color: #dbd8da;
+  height: 200px; /* Fixed height for consistency, adjust as needed */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners to match the design */
 }
 
-.main-col .col {
-  width: 80%;
-  margin: 0 auto;
+.services .col div {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-col .col h1 {
-  font-size: 3.5vmin;
-  padding-bottom: 20px;
-}
-
-.main-col col p {
-  font-size: 3vmin;
-  color: #000;
-}
-
-.main-col .col p:hover {
-  color: #e2dcdc;
-}
-
-.main-col .col .one,
-.main-col .col .two,
-.main-col .col .three,
-.main-col .col .four {
-  width: 100%;
-  height: 40vh;
-  padding: 20px;
-}
-
-.main-col .col .one:hover,
-.main-col .col .two:hover,
-.main-col .col .three:hover,
-.main-col .col .four:hover {
-  background-color: #f18c8e;
-  transition: 0.5 ease-in;
-}
-
-/*Priceing*/
-
-.pricing {
-  width: 100%;
-  height: 90vh;
-  padding: 50px 0;
-}
-
-.pricing .only-text {
-  width: 70%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
-  padding: 20px;
+  align-items: center;
 }
 
-.pricing .only-text h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #f18c8e;
+.services .col img {
+  width: 100%; /* Adjust the width to fit the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
-.pricing .only-text h1 {
-  font-size: 3rem;
-  padding: 10px 0;
+/* For pricing section images */
+.pricing-sec div img {
+  width: 100%; /* Adjust the width to fit the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
-.pricing .only-text p {
-  font-size: 1.2rem;
-  color: #9a9a9a;
+.services,
+.pricing {
+  width: 48%;
+  padding: 10px;
 }
 
-.pricing .priceing-sec {
-  width: 100%;
-  padding: 0 5%;
+.services {
+  background-color: #fff;
+}
+
+.services .main-col {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.pricing .priceing-sec .one,
-.pricing .priceing-sec .two,
-.pricing .priceing-sec .three,
-.pricing .priceing-sec .four {
-  width: 100%;
-  max-width: 250px;
-  border: 1px solid #f18c8e;
+.services .col div {
+  flex: 1;
+  min-width: 250px;
   text-align: center;
-  margin: 20px 10px;
-  padding: 20px 0;
-  overflow: hidden;
 }
 
-.pricing .priceing-sec .one h3,
-.pricing .priceing-sec .two h3,
-.pricing .priceing-sec .three h3,
-.pricing .priceing-sec .four h3 {
-  font-size: 2.5vmin;
-  color: #f18c8e;
-  font-weight: 800;
-  padding: 15px 0;
-  text-transform: uppercase;
+.services img {
+  max-width: 100%;
+  height: auto;
 }
 
-.pricing .priceing-sec .one h1,
-.pricing .priceing-sec .two h1,
-.pricing .priceing-sec .three h1,
-.pricing .priceing-sec .four h1 {
-  font-size: 4vmin;
+.services h1 {
+  font-size: 1.5em;
+  margin: 10px 0;
 }
 
-.pricing .priceing-sec .one h2,
-.pricing .priceing-sec .two h2,
-.pricing .priceing-sec .three h2,
-.pricing .priceing-sec .four h2 {
-  font-size: 4vmin;
-  padding: 5px 0;
+.services p {
+  font-size: 1em;
+  line-height: 1.6;
 }
 
-.pricing .priceing-sec .one button,
-.pricing .priceing-sec .two button,
-.pricing .priceing-sec .three button,
-.pricing .priceing-sec .four button {
-  font-size: 3vmin;
-  padding: 10px 20px;
-  background-color: #f18c8e;
-  border: none;
-  border-radius: 25px;
+.pricing {
+  background-color: #f4f4f4;
 }
 
-.pricing .priceing-sec .one button:hover,
-.pricing .priceing-sec .two button:hover,
-.pricing .priceing-sec .three button:hover,
-.pricing .priceing-sec .four button:hover {
-  background: color #8b3d71;
+.pricing .only-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing .only-text h1 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.pricing .only-text p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.pricing .pricing-sec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pricing .pricing-sec div {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.pricing .pricing-sec h1 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.pricing .pricing-sec h2 {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.pricing button {
+  background-color: #e8491d;
   color: #fff;
-  padding: 15px 25px;
-  transition: 1s;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pricing button:hover {
+  background-color: #d43f0f;
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-section .social-icon {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
 }
