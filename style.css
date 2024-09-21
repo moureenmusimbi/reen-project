@@ -80,10 +80,6 @@ header .btn {
   height: auto;
 }
 
-
-
-
-
 .txt-p {
   font-family: "Georgia", serif;
   font-size: 1.2em;
@@ -255,7 +251,7 @@ header .btn {
 }
 
 .pricing .only-text p {
-  font-size: 1em;
+  font-size: 1.8rem;
   line-height: 1.6;
 }
 
